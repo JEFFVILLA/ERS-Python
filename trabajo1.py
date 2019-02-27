@@ -1,3 +1,6 @@
+import nltk
+from nltk.corpus import gutenberg
+from nltk.probability import FreqDist
 # Funcion max
 
 def maxnum (a,b):
@@ -43,9 +46,27 @@ def pangrama(sentencia):
 
 pangrama("The quick brown fox jumps over the lazy dog")
 
+#Frecuencia de caracteres en una frase.
 
+def char_freq(cadena):
+  freq = {}
+  for caracter in cadena:
+    if caracter in freq:
+      freq[caracter] += 1
+    else:
+      freq[caracter] = 1
+  return print(freq)
+      
 
+char_freq("holacomoestas")
 
+# Analisis de texto
+
+def alice(numero):
+    aliceinworder = FreqDist(word.lower() for word in gutenberg.words('carroll-alice.txt') if word.isalpha())
+    return aliceinworder.pprint(numero)
+
+alice(10)
 
 
 
