@@ -60,6 +60,18 @@ def char_freq(cadena):
 
 char_freq("holacomoestas")
 
+# Balanceo
+
+def balanceo (entrada):
+    cadena = [x for x in entrada if x in "[]"]
+    if len(cadena) % 2 != 0 or len(cadena) == 0:
+        respuesta = "NOT OK"
+    else:
+        respuesta = "OK"
+    return print (respuesta)
+
+balanceo("[[]")
+
 # Analisis de texto
 
 def alice(numero):
